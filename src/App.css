@@ -60,3 +60,49 @@ input {
   padding: 10px 0;
   cursor: pointer;
 }
+/* employee details styles */
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px solid #af0a0a;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 100px 0 0 0;
+  background-color: #111;
+  color: #fff;
+}
+.details p {
+  font-size: 14px;
+}
+.details p::after {
+  content: " :";
+}
+.details h3 {
+  font-size: 20px;
+}
+.details__head {
+  margin-bottom: 30px;
+}
+.top__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.top__details div {
+  margin-left: 20px;
+  padding: 20px 0 30px 0;
+}
+.img {
+  border-radius: 50%;
+}
+.bottom__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

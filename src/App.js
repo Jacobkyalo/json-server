@@ -3,6 +3,8 @@ import Employees from "./components/Employees";
 import "./App.css";
 import Header from "./components/Header";
 import AddForm from "./components/AddForm";
+import EmployeeDetails from "./components/EmployeeDetails";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [employees, setEmployees] = useState([]);
@@ -45,11 +47,27 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
-      <AddForm addEmployee={addEmployee} />
-      <div className="people">
-        <Employees employee={employees} deleteEmployee={handleRemove} />
-      </div>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                {" "}
+                <Header />
+                <AddForm addEmployee={addEmployee} />
+                <div className="people">
+                  <Employees
+                    employee={employees}
+                    deleteEmployee={handleRemove}
+                  />
+                </div>
+              </>
+            }
+          />
+          <Route path="/employee/:id" element={<EmployeeDetails />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

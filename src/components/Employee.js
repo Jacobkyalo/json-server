@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Employee = ({ employee, deleteEmployee }) => {
   return (
@@ -8,6 +9,9 @@ const Employee = ({ employee, deleteEmployee }) => {
           {employee.firstName} {employee.lastName}
         </h3>
         <p>{employee.email}</p>
+        <Link to={`/employee/${employee.id}`}>
+          <p>View More</p>
+        </Link>
       </div>
       <span className="delete" onClick={() => deleteEmployee(employee.id)}>
         Remove
