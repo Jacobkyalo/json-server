@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Jack",
+      "lastName": "Smith",
+      "email": "jacksmith@gmail.com",
+      "phone": "222-333-444-555",
+      "department": "ICT",
+      "profile": "https://randomuser.me/api/portraits/men/47.jpg"
+    },
+    {
+      "id": 3,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@gmail.com",
+      "phone": "222-333-853-555",
+      "department": "Clerk",
+      "profile": "https://randomuser.me/api/portraits/men/30.jpg"
+    },
+    {
+      "firstName": "collins",
+      "lastName": "mutinda",
+      "email": "collins@hotmail.com",
+      "phone": "333-444-66-533",
+      "department": "Accounting",
+      "profile": "https://randomuser.me/api/portraits/men/47.jpg",
+      "id": 4
+    }
+  ]
+}
