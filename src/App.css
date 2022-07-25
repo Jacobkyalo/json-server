@@ -40,6 +40,9 @@
 input {
   display: block;
 }
+.form label {
+  font-weight: 900;
+}
 .form__content input {
   margin-top: 5px;
   width: 100%;
