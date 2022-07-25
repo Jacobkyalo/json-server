@@ -1,4 +1,59 @@
+/* app styling */
 .app {
-  background-color: #272727;
+  min-height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+/* header */
+.heading {
+  font-size: 2rem;
+  margin: 20px 0;
+  text-shadow: 3px 1px 5px #550505;
+}
+/* single employee styling */
+.employee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b3b3b3;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  border-radius: 6px;
+}
+/* remove button */
+.delete {
+  margin-right: 20px;
+  color: #ff0000;
+  cursor: pointer;
+}
+/* form styles */
+.form {
+  display: block;
+}
+.form__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+.form label,
+input {
+  display: block;
+}
+.form__content input {
+  margin-top: 5px;
+  width: 100%;
+  outline: 0;
+  padding: 10px;
+}
+.form__btn {
+  width: 100%;
+  margin: 25px 0;
+  border: 0;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #550505;
   color: #fff;
+  padding: 10px 0;
+  cursor: pointer;
 }
