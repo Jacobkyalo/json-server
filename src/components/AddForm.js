@@ -23,6 +23,7 @@ const AddForm = ({ addEmployee }) => {
       setTimeout(() => {
         setError(false);
       }, 1500);
+      return;
     }
     addEmployee({ firstName, lastName, email, phone, department, profile });
   };
