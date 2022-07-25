@@ -1,46 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Employees from "./components/Employees";
 import "./App.css";
 import Header from "./components/Header";
 import AddForm from "./components/AddForm";
 
 function App() {
-  const [employees, setEmployees] = useState([
-    {
-      id: 1,
-      firstName: "Jack",
-      lastName: "Smith",
-      email: "jacksmith@gmail.com",
-      phone: 222 - 333 - 444 - 555,
-      department: "ICT",
-      profile: "https://randomuser.me/api/portraits/men/47.jpg",
-    },
-    {
-      id: 2,
-      firstName: "Mary",
-      lastName: "Jackson",
-      email: "maryjackson@gmail.com",
-      phone: 123 - 643 - 534 - 657,
-      department: "HR",
-      profile: "https://randomuser.me/api/portraits/women/47.jpg",
-    },
-    {
-      id: 3,
-      firstName: "John",
-      lastName: "Doe",
-      email: "johndoe@gmail.com",
-      phone: 976 - 762 - 833 - 477,
-      department: "Clerk",
-      profile: "https://randomuser.me/api/portraits/men/30.jpg",
-    },
-  ]);
+  const [employees, setEmployees] = useState([]);
 
-  const addEmployee = (employee) => {
-    const id = Math.floor(Math.random() * 1000 + 1);
-    setEmployees([...employees, { id, ...employee }]);
+  const fetchEmployees = async () => {
+    const res = await fetch("http://localhost:5000/employees");
+    const data = await res.json();
+    return data;
   };
 
-  const handleRemove = (id) => {
+  useEffect(() => {
+    const getEmployees = async () => {
+      const serverData = await fetchEmployees();
+      setEmployees(serverData);
+    };
+
+    getEmployees();
+  }, []);
+
+  const addEmployee = async (employee) => {
+    const ADD_SERVER_EMP = await fetch("http://localhost:5000/employees", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(employee),
+    });
+    const RESPONSE = await ADD_SERVER_EMP.json();
+
+    setEmployees([...employees, RESPONSE]);
+  };
+
+  const handleRemove = async (id) => {
+    await fetch(`http://localhost:5000/employees/${id}`, {
+      method: "DELETE",
+    });
+
     setEmployees(employees.filter((employee) => employee.id !== id));
   };
 

@@ -26,6 +26,12 @@ const AddForm = ({ addEmployee }) => {
       return;
     }
     addEmployee({ firstName, lastName, email, phone, department, profile });
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setProfile("");
+    setPhone("");
+    setDepartment("");
   };
 
   return (
