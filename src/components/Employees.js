@@ -5,14 +5,17 @@ const Employees = ({ employee, deleteEmployee }) => {
   return (
     <section>
       <>
-        {employee &&
+        {employee.length > 0 ? (
           employee.map((employee) => (
             <Employee
               key={employee.id}
               employee={employee}
               deleteEmployee={deleteEmployee}
             />
-          ))}
+          ))
+        ) : (
+          <h2>No Employees found.</h2>
+        )}
       </>
     </section>
   );

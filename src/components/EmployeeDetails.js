@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 const EmployeeDetails = () => {
   const [employee, setEmployee] = useState({});
   const params = useParams();
+  const navigate = useNavigate();
 
   const fetchSingleEmployee = async () => {
     const EMP_RESPONSE = await fetch(
@@ -11,7 +13,6 @@ const EmployeeDetails = () => {
     );
     const data = await EMP_RESPONSE.json();
     setEmployee(data);
-    console.log(data);
   };
 
   useEffect(() => {
@@ -22,6 +23,19 @@ const EmployeeDetails = () => {
     <section>
       {employee && (
         <div className="details">
+          <h1>
+            {
+              <FaArrowLeft
+                style={{
+                  position: "absolute",
+                  left: "5px",
+                  top: "5px",
+                  cursor: "pointer",
+                }}
+                onClick={() => navigate("/")}
+              />
+            }
+          </h1>
           <h2 className="details__head">
             {employee.firstName} {employee.lastName} Details
           </h2>

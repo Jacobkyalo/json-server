@@ -63,6 +63,7 @@ input {
 /* employee details styles */
 
 .details {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +71,7 @@ input {
   border: 3px solid #af0a0a;
   border-radius: 10px;
   padding: 10px 20px;
-  margin: 100px 0 0 0;
+  margin: 80px 0 0 0;
   background-color: #111;
   color: #fff;
 }
@@ -84,7 +85,7 @@ input {
   font-size: 20px;
 }
 .details__head {
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 .top__details {
   display: flex;

@@ -1,31 +1,22 @@
 {
   "employees": [
     {
-      "id": 1,
       "firstName": "Jack",
       "lastName": "Smith",
-      "email": "jacksmith@gmail.com",
-      "phone": "222-333-444-555",
+      "email": "jack333@gnmail.com",
+      "phone": "0753838326",
       "department": "ICT",
-      "profile": "https://randomuser.me/api/portraits/men/47.jpg"
+      "profile": "https://randomuser.me/api/portraits/men/47.jpg",
+      "id": 1
     },
     {
-      "id": 3,
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "johndoe@gmail.com",
-      "phone": "222-333-853-555",
-      "department": "Clerk",
-      "profile": "https://randomuser.me/api/portraits/men/30.jpg"
-    },
-    {
-      "firstName": "collins",
-      "lastName": "mutinda",
-      "email": "collins@hotmail.com",
-      "phone": "333-444-66-533",
-      "department": "Accounting",
-      "profile": "https://randomuser.me/api/portraits/men/27.jpg",
-      "id": 4
+      "firstName": "Mary",
+      "lastName": "Jackson",
+      "email": "maryjackson55@gmail.com",
+      "phone": "0754464736",
+      "department": "",
+      "profile": "https://randomuser.me/api/portraits/women/37.jpg",
+      "id": 2
     }
   ]
 }

@@ -8,7 +8,7 @@ const Employee = ({ employee, deleteEmployee }) => {
         <h3>
           {employee.firstName} {employee.lastName}
         </h3>
-        <p>{employee.email}</p>
+        <p>{employee.email}...</p>
         <Link to={`/employee/${employee.id}`}>
           <p>View More</p>
         </Link>
