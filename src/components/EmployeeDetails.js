@@ -3,10 +3,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
 const EmployeeDetails = () => {
+  //setting state for fetched data
   const [employee, setEmployee] = useState({});
+  // react-router-dom variables
   const params = useParams();
   const navigate = useNavigate();
 
+  // fetching a single or specific employee from the server
   const fetchSingleEmployee = async () => {
     const EMP_RESPONSE = await fetch(
       `http://localhost:5000/employees/${params.id}`
@@ -15,6 +18,7 @@ const EmployeeDetails = () => {
     setEmployee(data);
   };
 
+  //calling the fetch function using useEffect hook
   useEffect(() => {
     fetchSingleEmployee();
   }, []);

@@ -4,6 +4,7 @@ import Employee from "./Employee";
 const Employees = ({ employee, deleteEmployee }) => {
   return (
     <section>
+      {/* mapping through the employees data and returing the Employee component */}
       <>
         {employee.length > 0 ? (
           employee.map((employee) => (

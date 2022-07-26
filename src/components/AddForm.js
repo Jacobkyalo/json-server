@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const AddForm = ({ addEmployee }) => {
+  // states for input fields
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -9,8 +10,10 @@ const AddForm = ({ addEmployee }) => {
   const [profile, setProfile] = useState("");
   const [error, setError] = useState(false);
 
+  // function to handle submission of form
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    //handling form validation before submission
     if (
       !firstName ||
       !lastName ||
@@ -25,7 +28,10 @@ const AddForm = ({ addEmployee }) => {
       }, 1500);
       return;
     }
+    //else add object values to addEmployee Prop
     addEmployee({ firstName, lastName, email, phone, department, profile });
+
+    // set input fields to empty after form submission
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -35,6 +41,7 @@ const AddForm = ({ addEmployee }) => {
   };
 
   return (
+    //rendering to the UI
     <section>
       <form className="form" onSubmit={handleFormSubmit}>
         <div className="form__content">
