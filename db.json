@@ -17,6 +17,33 @@
       "department": "",
       "profile": "https://randomuser.me/api/portraits/women/37.jpg",
       "id": 2
+    },
+    {
+      "firstName": "Daniel",
+      "lastName": "Makau",
+      "email": "danmakau344@yahoo.com",
+      "phone": "0758454846",
+      "department": "Commerce",
+      "profile": "https://randomuser.me/api/portraits/men/20.jpg",
+      "id": 3
+    },
+    {
+      "firstName": "Joshua",
+      "lastName": "Samuel",
+      "email": "joshuasamuel@gmail.com",
+      "phone": "0734645742",
+      "department": "Statistics",
+      "profile": "https://randomuser.me/api/portraits/men/24.jpg",
+      "id": 4
+    },
+    {
+      "firstName": "Karen",
+      "lastName": "Johnson",
+      "email": "karen213@gmail.com",
+      "phone": "0723456784",
+      "department": "Coding",
+      "profile": "https://randomuser.me/api/portraits/women/20.jpg",
+      "id": 5
     }
   ]
 }

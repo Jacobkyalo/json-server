@@ -12,11 +12,11 @@ const AddForm = ({ addEmployee }) => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     if (
-      !firstName &&
-      !lastName &&
-      !email &&
-      !phone &&
-      !department &&
+      !firstName ||
+      !lastName ||
+      !email ||
+      !phone ||
+      !department ||
       !profile
     ) {
       setError(true);
