@@ -1,4 +1,4 @@
-# Employee Treacker
+# Employee Tracker
 
 A React App that uses a fake REST API from json-server to display employees details.
 
@@ -21,7 +21,7 @@ Open [http://localhost:5000/employees](http://localhost:5000/employees) to view 
 
 ### Fetching all employees
 
-Use.
+Use:
 
 ```
 fetch(`http://localhost:5000/employees`)
@@ -29,7 +29,7 @@ fetch(`http://localhost:5000/employees`)
 
 ### For single Employee
 
-Use
+Use:
 
 ```
 fetch(`http://localhost:5000/employees/${id}`)
